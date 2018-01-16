@@ -1,15 +1,19 @@
 // Code your solution in this file
 const drivers = ['Bobby', 'Sammy', 'Sally', 'Annette', 'Sarah', 'Bobby']
 
-function findMatching(drivers, string) {
-  if (driver === string) {
-    return true
-  } else {
-    return false
-  }
+function findMatching(drivers, name) {
+  let matchingDrivers = drivers.filter(function(driver){
+    if (name === driver){
+      return true
+    } else {
+      return false
+    }
+  })
+
+  return matchingDrivers;
 }
 
-drivers.filter(findMatching);
+
 
 function fuzzyMatch(drivers, string) {
 
