@@ -27,7 +27,7 @@ function fuzzyMatch(drivers, name) {
 
 function matchName(drivers, name) {
   let exactMatches = drivers.filter(function(driver){
-    if (name.toLowerCase() === driver.toLowerCase()) {
+    if (driver.name.toLowerCase() === name.toLowerCase()) {
       return true
     } else {
       return false
