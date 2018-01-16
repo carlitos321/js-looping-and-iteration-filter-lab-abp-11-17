@@ -13,8 +13,6 @@ function findMatching(drivers, name) {
   return matchingDrivers;
 }
 
-
-
 function fuzzyMatch(drivers, name) {
   let fuzzyDrivers = drivers.filter(function(driver){
     if (name[0] === driver[0]) {
@@ -27,6 +25,14 @@ function fuzzyMatch(drivers, name) {
   return fuzzyDrivers
 }
 
-function matchName(drivers, string) {
+function matchName(drivers, name) {
+  let exactMatches = drivers.filter(function(driver){
+    if (name === driver) {
+      return true
+    } else {
+      return false
+    }
+  })
 
+  return exactMatches
 }
